@@ -61,6 +61,11 @@ module URI
     end
   end
 
-  @@schemes['DATA'] = Data
+  # Handle both Ruby 3.2.7's scheme_list and older Ruby versions' @@schemes
+  if defined?(scheme_list)
+    scheme_list['DATA'] = Data
+  else
+    @@schemes['DATA'] = Data
+  end
 
 end

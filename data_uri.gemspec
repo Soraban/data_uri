@@ -14,6 +14,6 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.files = %w(README.rdoc Rakefile) + Dir.glob("lib/**/*")
 
-  s.add_development_dependency 'rake'
+  s.add_development_dependency 'rake', '>= 12.3.3'
   s.add_development_dependency 'minitest'
 end
